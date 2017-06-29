@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="jlblog Maven Webapp"
+  id="myeclipse.1498622567076"
+  context-root="/jlblog"
+  j2ee-spec="6.0"
+  archive="jlblog Maven Webapp.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
