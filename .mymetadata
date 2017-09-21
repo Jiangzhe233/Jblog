@@ -4,7 +4,7 @@
   name="jlblog Maven Webapp"
   id="myeclipse.1498622567076"
   context-root="/jlblog"
-  j2ee-spec="6.0"
+  j2ee-spec="5.0"
   archive="jlblog Maven Webapp.war">
   <attributes>
     <attribute name="webrootdir" value="src/main/webapp" />

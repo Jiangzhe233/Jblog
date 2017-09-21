@@ -5,17 +5,19 @@
   <artifactId>jlblog</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>jlblog Maven Webapp</name>
+  <name>jblog Maven Webapp</name>
   <url>http://maven.apache.org</url>
+ 
     <!-- 用来设置版本号 -->  
     <properties>  
     <srping.version>4.0.2.RELEASE</srping.version>  
         <mybatis.version>3.2.8</mybatis.version>  
         <slf4j.version>1.7.12</slf4j.version>  
-        <log4j.version>1.2.17</log4j.version>
         
+		
         
     </properties>  
+
   <dependencies>
         <!-- 单元测试 -->  
         <dependency>  
@@ -135,11 +137,6 @@
         </dependency>  
         <!-- log start -->  
         <dependency>  
-            <groupId>log4j</groupId>  
-            <artifactId>log4j</artifactId>  
-            <version>${log4j.version}</version>  
-        </dependency>  
-        <dependency>  
             <groupId>org.slf4j</groupId>  
             <artifactId>slf4j-api</artifactId>  
             <version>${slf4j.version}</version>  
@@ -149,6 +146,7 @@
             <artifactId>slf4j-log4j12</artifactId>  
             <version>${slf4j.version}</version>  
         </dependency>  
+        
         <!-- log END -->  
         <!-- Json -->  
         <!-- 格式化对象，方便输出日志 -->  
@@ -196,9 +194,74 @@
             <artifactId>poi-ooxml</artifactId>  
             <version>3.9</version>  
         </dependency>  
+   
+		<!--springfox依赖-->
+	<dependency>
+	<groupId>com.mangofactory</groupId>
+	<artifactId>swagger-springmvc</artifactId>
+	<version>1.0.2</version>
+	</dependency>
+
+<!--静态页面依赖的webjar-->
+	<dependency>
+	<groupId>org.webjars.bower</groupId>
+	<artifactId>swagger-ui</artifactId>
+	<version>2.1.8-M1</version>
+	</dependency>
         <!-- AL相关添加 -->  
+      <dependency>  
+            <groupId>io.springfox</groupId>  
+            <artifactId>springfox-swagger2</artifactId>  
+            <version>2.4.0</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>io.springfox</groupId>  
+            <artifactId>springfox-swagger-ui</artifactId>  
+            <version>2.4.0</version>  
+        </dependency>  
+        <!-- swagger-mvc -->  
+<!-- json -->  
+        <dependency>  
+            <groupId>com.fasterxml.jackson.core</groupId>  
+            <artifactId>jackson-core</artifactId>  
+            <version>2.6.5</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>com.fasterxml.jackson.core</groupId>  
+            <artifactId>jackson-databind</artifactId>  
+            <version>2.6.5</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>com.fasterxml.jackson.core</groupId>  
+            <artifactId>jackson-annotations</artifactId>  
+            <version>2.6.5</version>  
+        </dependency>  
+ <!-- AspectJ -->
+ 		<dependency>  
+            <groupId>org.aspectj</groupId>  
+            <artifactId>aspectjrt</artifactId>  
+            <version>1.6.11</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.aspectj</groupId>  
+            <artifactId>aspectjweaver</artifactId>  
+            <version>1.6.11</version>  
+        </dependency>  
+
   </dependencies>
   <build>
-    <finalName>jlblog</finalName>
+    <finalName>jblog</finalName>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+
   </build>
 </project>
